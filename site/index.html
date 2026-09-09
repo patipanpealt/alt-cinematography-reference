@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Cinematography Reference</title>
+<meta name="description" content="A cinematography reference for AI image and video prompts: shot sizes, camera angles, movement, lighting, and composition.">
+<link rel="icon" href="assets/logo/ALT-Logo-Orange.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="shell">
+
+<nav class="nav">
+  <a class="nav-logo" href="#hero" aria-label="Back to top"><svg class="logo" viewBox="0 0 960.2 412.4" role="img" aria-label="ALT" xmlns="http://www.w3.org/2000/svg"><polygon class="alt-f" points="465.5 284.5 465.5 65.1 430.1 65.1 394.6 100.6 394.6 256.2 365.7 285 415.9 335.2 466 285 465.5 284.5"/> <polygon class="alt-o" points="628.7 278 628.7 242.5 611 242.5 557.8 242.5 557.8 65.1 522.3 65.1 486.8 100.6 486.8 313.4 540 313.4 557.8 313.4 593.2 313.4 628.7 278"/> <polygon class="alt-f" points="960.2 164.1 960.2 126 884 126 884 65.1 845.9 65.1 807.8 103.2 807.8 335.5 845.9 335.5 884 297.4 884 202.2 922.1 202.2 960.2 164.1"/> <path class="alt-fs" d="M808.2,126v76.2h-76.2v-38.1l38.1-38.1h38.1ZM808.2,124h-38.1c-.5,0-1,.2-1.4.6l-38.1,38.1c-.4.4-.6.9-.6,1.4v38.1c0,1.1.9,2,2,2h76.2c1.1,0,2-.9,2-2v-76.2c0-1.1-.9-2-2-2h0Z"/> <polygon class="alt-f" points="0 65.1 0 132.6 188.7 132.6 188.7 138.4 160.7 166.4 208.5 214.2 256.2 166.4 256.2 132.6 256.2 98.9 256.2 65.1 0 65.1"/> <polygon class="alt-f" points="107.9 195.4 107.9 235 56 286.8 103.8 334.6 175.4 263 175.4 263 175.4 195.4 107.9 195.4"/> <polygon class="alt-o" points="259.6 288.7 259.6 221.1 70.9 221.1 70.9 215.4 98.8 187.4 51.1 139.6 3.3 187.4 3.3 221.1 3.3 254.9 3.3 288.7 259.6 288.7"/> <rect class="alt-fs" x="283.6" y="379.7" width="72.8" height="7.3" transform="translate(-177.4 338.6) rotate(-45)"/> <rect class="alt-o thin" x="638" y="25.4" width="72.8" height="7.3" transform="translate(177 485.4) rotate(-45)"/></svg></a>
+  <div class="nav-links">
+    <a href="#shots">Shot Sizes &amp; Framing</a>
+    <a href="#angles">Camera Angles</a>
+    <a href="#movement">Camera Movement</a>
+    <a href="#lighting">Lighting</a>
+    <a href="#composition">Composition &amp; Framing Rules</a>
+    <a href="#examples">Matched Visual Examples</a>
+  </div>
+</nav>
+
+<header class="hero" id="hero">
+  <div class="hero-copy">
+    <h1>A <em>Cinematography</em><br>Reference</h1>
+    <p class="sub">A complete reference to shot sizes, camera angles, camera movement, lighting, and composition - the visual grammar of cinema.</p>
+  </div>
+</header>
+
+<section class="band" id="shots">
+  <div class="sec-head">
+    <span class="chip"><i></i>01 &mdash; Shot Sizes</span>
+    <h2>Shot Sizes <em>&amp; Framing</em></h2>
+    <p class="sec-intro">How much of the subject and environment fills the frame. Shot size controls intimacy, scale, and where the audience&#x27;s attention lands.</p>
+  </div>
+  <div class="prompt-rule"><b>Prompt Rule</b>เวลาเขียน prompt ให้ใส่ shot size ตั้งแต่ต้นประโยค เช่น <code>cinematic close-up shot of...</code> เพราะนี่คือคำสั่งที่บอก AI ว่าภาพควร &quot;ใกล้หรือไกล&quot; แค่ไหน</div>
+  <div class="grid">
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="4" y="6" width="192" height="84"/><line class="ghost" x1="4" y1="74" x2="196" y2="74"/><circle class="subj" cx="100" cy="68" r="3"/><rect class="subj" x="98.5" y="70" width="3" height="6"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Extreme Wide Shot example full size"><img src="assets/shots/extreme-wide.webp" alt="Extreme Wide Shot example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Shot Size</span><span class="abbr">EWS / XLS</span></div>
+      <h3>Extreme Wide Shot</h3>
+      <p>ตัวแบบเล็กมากเมื่อเทียบกับพื้นที่รอบตัว ภาพเน้น scale และบรรยากาศมากกว่ารายละเอียดของคน</p>
+      <div class="use"><b>Use it for</b>เปิดสถานที่, ความโดดเดี่ยว, ความยิ่งใหญ่, scale ของฉาก</div>
+      <div class="prompt"><b>Prompt words</b>extreme wide shot, tiny subject, vast environment, cinematic scale</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="4" y="6" width="192" height="84"/><line class="ghost" x1="4" y1="78" x2="196" y2="78"/><circle class="subj" cx="100" cy="48" r="6"/><rect class="subj" x="96" y="53" width="8" height="25"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Wide / Long Shot example full size"><img src="assets/shots/wide-long.webp" alt="Wide / Long Shot example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Shot Size</span><span class="abbr">WS / LS</span></div>
+      <h3>Wide / Long Shot</h3>
+      <p>เห็นตัวแบบเต็มตัวพร้อมพื้นที่รอบ ๆ มากพอให้เข้าใจว่าอยู่ที่ไหนและกำลังอยู่ในบริบทแบบใด</p>
+      <div class="use"><b>Use it for</b>เปิดฉาก, action context, blocking, ให้เห็นพื้นที่</div>
+      <div class="prompt"><b>Prompt words</b>wide shot, full body visible, environment context, spatial geography</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="4" y="6" width="192" height="84"/><circle class="subj" cx="100" cy="26" r="10"/><rect class="subj" x="92" y="35" width="16" height="50"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Full Shot example full size"><img src="assets/shots/full.webp" alt="Full Shot example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Shot Size</span><span class="abbr">FS</span></div>
+      <h3>Full Shot</h3>
+      <p>เห็นร่างกายครบตั้งแต่หัวถึงเท้า เหมาะเมื่อท่าทาง การแต่งตัว หรือ posture สำคัญต่อเรื่อง</p>
+      <div class="use"><b>Use it for</b>ท่าทาง, ชุด, body language, การยืนหรือเคลื่อนไหว</div>
+      <div class="prompt"><b>Prompt words</b>full shot, head-to-toe framing, clear body language</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="4" y="6" width="192" height="84"/><circle class="subj" cx="100" cy="22" r="13"/><rect class="subj" x="89" y="34" width="22" height="56"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Medium Long / Cowboy example full size"><img src="assets/shots/medium-long-cowboy.webp" alt="Medium Long / Cowboy example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Shot Size</span><span class="abbr">MLS / Cowboy</span></div>
+      <h3>Medium Long / Cowboy</h3>
+      <p>กรอบภาพประมาณเข่าหรือหน้าขาขึ้นไป ยังเห็น body language แต่เริ่มเข้าใกล้ความรู้สึกของตัวละครมากขึ้น</p>
+      <div class="use"><b>Use it for</b>ฉากเผชิญหน้า, walk-and-talk, pose ที่ต้องเห็นมือและลำตัว</div>
+      <div class="prompt"><b>Prompt words</b>medium long shot, cowboy shot, knees-up framing</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="4" y="6" width="192" height="84"/><circle class="subj" cx="100" cy="30" r="16"/><path class="subj" d="M78 50 Q100 44 122 50 L122 90 L78 90 Z"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Medium Shot example full size"><img src="assets/shots/medium.webp" alt="Medium Shot example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Shot Size</span><span class="abbr">MS</span></div>
+      <h3>Medium Shot</h3>
+      <p>กรอบภาพประมาณเอวขึ้นไป เป็นระยะที่สมดุลระหว่างสีหน้า มือ ลำตัว และบริบท เหมาะกับคอนเทนต์พูดกับกล้อง</p>
+      <div class="use"><b>Use it for</b>บทสนทนา, interview, talking head, neutral coverage</div>
+      <div class="prompt"><b>Prompt words</b>medium shot, waist-up framing, natural conversation distance</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="4" y="6" width="192" height="84"/><circle class="subj" cx="100" cy="34" r="22"/><path class="subj" d="M70 62 Q100 54 130 62 L130 90 L70 90 Z"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Medium Close-Up example full size"><img src="assets/shots/medium-close-up.webp" alt="Medium Close-Up example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Shot Size</span><span class="abbr">MCU</span></div>
+      <h3>Medium Close-Up</h3>
+      <p>เห็นช่วงอกถึงศีรษะ ทำให้สีหน้าเด่นขึ้น แต่ยังมีไหล่และลำตัวเล็กน้อยเพื่อไม่ให้ภาพแน่นเกินไป</p>
+      <div class="use"><b>Use it for</b>อารมณ์, reaction, คำพูดสำคัญ, course hero portrait</div>
+      <div class="prompt"><b>Prompt words</b>medium close-up, chest-up framing, expressive face</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="4" y="6" width="192" height="84"/><circle class="subj" cx="100" cy="48" r="34"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Close-Up example full size"><img src="assets/shots/close-up.webp" alt="Close-Up example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Shot Size</span><span class="abbr">CU</span></div>
+      <h3>Close-Up</h3>
+      <p>ใบหน้าหรือวัตถุหลักครองพื้นที่ส่วนใหญ่ของภาพ ตัดสิ่งรบกวนออกเพื่อดึงความรู้สึกหรือรายละเอียดให้ชัด</p>
+      <div class="use"><b>Use it for</b>อารมณ์พีค, ความใกล้ชิด, reveal, thumbnail สีหน้าชัด</div>
+      <div class="prompt"><b>Prompt words</b>close-up shot, shallow depth of field, sharp eyes</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="4" y="6" width="192" height="84"/><ellipse class="subj" cx="100" cy="48" rx="60" ry="30"/><circle cx="100" cy="48" r="14" fill="#08080a"/><circle cx="100" cy="48" r="6" class="lite"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Extreme Close-Up example full size"><img src="assets/shots/extreme-close-up.webp" alt="Extreme Close-Up example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Shot Size</span><span class="abbr">ECU / XCU</span></div>
+      <h3>Extreme Close-Up</h3>
+      <p>รายละเอียดเล็กมากเต็มกรอบภาพ เช่น ดวงตา ผิว หรือ texture ทำให้ภาพเข้มข้น น่าสงสัย หรือเน้นสัมผัส</p>
+      <div class="use"><b>Use it for</b>ความตึงเครียด, รายละเอียด, macro, texture</div>
+      <div class="prompt"><b>Prompt words</b>extreme close-up, macro detail, intense focus</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="4" y="6" width="192" height="84"/><rect class="subj" x="60" y="36" width="80" height="24" rx="3"/><line x1="70" y1="48" x2="130" y2="48" stroke="#08080a" stroke-width="2"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Insert / Cutaway example full size"><img src="assets/shots/insert-cutaway.webp" alt="Insert / Cutaway example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Shot Size</span><span class="abbr">Insert</span></div>
+      <h3>Insert / Cutaway</h3>
+      <p>ภาพแทรกของวัตถุหรือรายละเอียดเฉพาะที่คนดูต้องเห็น เช่น มือจับเลนส์ ปุ่ม เครื่องมือ หรือหลักฐานในเรื่อง</p>
+      <div class="use"><b>Use it for</b>วัตถุสำคัญ, story beat, product detail, transition</div>
+      <div class="prompt"><b>Prompt words</b>insert shot, detailed object, story clue, tactile texture</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="4" y="6" width="192" height="84"/><circle class="subj" cx="68" cy="34" r="18"/><path class="subj" d="M44 56 Q68 50 92 56 L92 90 L44 90 Z"/><circle class="ghost" cx="140" cy="40" r="14"/><path class="ghost" d="M120 60 Q140 55 160 60 L160 90 L120 90 Z"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Two-Shot example full size"><img src="assets/shots/two-shot.webp" alt="Two-Shot example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Shot Size</span><span class="abbr">2-Shot</span></div>
+      <h3>Two-Shot</h3>
+      <p>มีตัวแบบสองคนอยู่ในกรอบเดียวกัน ระยะห่าง ตำแหน่ง และขนาดของแต่ละคนบอกความสัมพันธ์และ tension</p>
+      <div class="use"><b>Use it for</b>ความสัมพันธ์, บทสนทนา, tension, dialogue geography</div>
+      <div class="prompt"><b>Prompt words</b>two-shot, two subjects in frame, relationship tension</div>
+    </article>
+  </div>
+</section>
+
+<section class="band" id="angles">
+  <div class="sec-head">
+    <span class="chip"><i></i>02 &mdash; Camera Angles</span>
+    <h2>Camera <em>Angles</em></h2>
+    <p class="sec-intro">Where the camera sits relative to the subject. Angle is psychology - it dictates power, vulnerability, and the viewer&#x27;s emotional alignment.</p>
+  </div>
+  <div class="prompt-rule"><b>Prompt Rule</b>ใส่ angle หลัง subject/action เช่น <code>low angle, looking up at the founder</code> เพื่อคุมความรู้สึกของคนดู ไม่ใช่แค่ตำแหน่งกล้อง</div>
+  <div class="grid">
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><circle class="subj" cx="100" cy="42" r="14"/><rect class="subj" x="92" y="54" width="16" height="30"/><line class="arrow" x1="20" y1="42" x2="78" y2="42"/><path class="arrow" d="M70 37 L80 42 L70 47"/><line class="ghost" x1="82" y1="42" x2="118" y2="42"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Eye-Level camera angle example full size"><img src="assets/angles/eye-level.webp" alt="Eye-Level camera angle example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Angle</span></div>
+      <h3>Eye-Level</h3>
+      <p>กล้องอยู่ระดับสายตาของตัวแบบ ให้ความรู้สึกเป็นกลาง เป็นธรรมชาติ และเหมือนเรากำลังยืนคุยกับคนตรงหน้า</p>
+      <div class="use"><b>Feels like</b>สมจริง, เท่าเทียม, เป็นกลาง</div>
+      <div class="prompt"><b>Prompt words</b>eye-level angle, natural perspective, human connection</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><circle class="subj" cx="100" cy="46" r="13"/><rect class="subj" x="93" y="57" width="14" height="28"/><line class="arrow" x1="40" y1="14" x2="92" y2="40"/><path class="arrow" d="M84 32 L94 41 L82 43"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View High Angle camera angle example full size"><img src="assets/angles/high-angle.webp" alt="High Angle camera angle example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Angle</span></div>
+      <h3>High Angle</h3>
+      <p>กล้องอยู่สูงและมองลงมา ทำให้ตัวแบบดูเล็กลง ถูกสังเกต หรือมีความเปราะบาง เหมาะกับฉากที่อยากลดพลังของตัวละคร</p>
+      <div class="use"><b>Feels like</b>เปราะบาง, พ่ายแพ้, ตัวเล็กลง</div>
+      <div class="prompt"><b>Prompt words</b>high angle, looking down, vulnerable subject</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><circle class="subj" cx="100" cy="40" r="13"/><rect class="subj" x="93" y="51" width="14" height="33"/><line class="arrow" x1="40" y1="84" x2="92" y2="56"/><path class="arrow" d="M84 64 L94 55 L82 53"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Low Angle camera angle example full size"><img src="assets/angles/low-angle.webp" alt="Low Angle camera angle example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Angle</span></div>
+      <h3>Low Angle</h3>
+      <p>กล้องอยู่ต่ำและเงยขึ้น ทำให้ตัวแบบดูมีอำนาจ สูงใหญ่ หรือเป็น hero moment ใช้ดีมากกับภาพเปิดตัวสินค้า/ผู้สอน</p>
+      <div class="use"><b>Feels like</b>ทรงพลัง, มีอำนาจ, น่าเกรงขาม</div>
+      <div class="prompt"><b>Prompt words</b>low angle shot, heroic scale, powerful silhouette</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><g transform="rotate(-11 100 48)"><rect class="frame-stroke" x="38" y="18" width="124" height="60"/><circle class="subj" cx="100" cy="42" r="12"/><rect class="subj" x="94" y="53" width="12" height="25"/></g></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Dutch / Canted camera angle example full size"><img src="assets/angles/dutch-canted.webp" alt="Dutch / Canted camera angle example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Angle</span></div>
+      <h3>Dutch / Canted</h3>
+      <p>เอียงเส้นขอบฟ้าหรือแกนภาพ ทำให้ภาพเสียสมดุลโดยตั้งใจ เหมาะกับความตึงเครียด ความสับสน หรือฉากที่อยากให้รู้สึกไม่ปกติ</p>
+      <div class="use"><b>Feels like</b>วุ่นวาย, กดดัน, เสียสมดุล</div>
+      <div class="prompt"><b>Prompt words</b>dutch angle, tilted horizon, psychological tension</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="48" y="14" width="104" height="70"/><circle class="subj" cx="100" cy="48" r="18"/><line class="ghost" x1="100" y1="14" x2="100" y2="84"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Overhead / Top Shot camera angle example full size"><img src="assets/angles/overhead-top.webp" alt="Overhead / Top Shot camera angle example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Angle</span></div>
+      <h3>Overhead / Top Shot</h3>
+      <p>กล้องอยู่เหนือหัวและมองลงมาตรง ๆ ทำให้ฉากกลายเป็นรูปทรง แผนที่ หรือ pattern เหมาะกับงานที่ต้องการ composition ชัด</p>
+      <div class="use"><b>Feels like</b>ออกแบบมาแล้ว, เหนือกว่า, เฝ้ามอง</div>
+      <div class="prompt"><b>Prompt words</b>overhead shot, top-down view, graphic composition</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><circle class="subj" cx="100" cy="62" r="8"/><rect class="subj" x="94" y="70" width="12" height="12"/><path class="arrow" d="M100 8 L100 48"/><path class="arrow" d="M94 40 L100 50 L106 40"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Bird&#x27;s-Eye View camera angle example full size"><img src="assets/angles/birds-eye.webp" alt="Bird&#x27;s-Eye View camera angle example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Angle</span></div>
+      <h3>Bird&#x27;s-Eye View</h3>
+      <p>มุมสูงจากระยะไกลกว่า top shot ทำให้ตัวแบบดูเป็นส่วนหนึ่งของพื้นที่หรือระบบใหญ่ ใช้เมื่ออยากให้เห็น scale และตำแหน่งในฉาก</p>
+      <div class="use"><b>Feels like</b>เห็นภาพรวม, ควบคุม, มองจากข้างบน</div>
+      <div class="prompt"><b>Prompt words</b>bird&#x27;s-eye view, aerial perspective, subject in landscape</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><circle class="subj" cx="100" cy="28" r="14"/><rect class="subj" x="92" y="40" width="16" height="35"/><path class="arrow" d="M100 90 L100 54"/><path class="arrow" d="M94 62 L100 52 L106 62"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Worm&#x27;s-Eye View camera angle example full size"><img src="assets/angles/worms-eye.webp" alt="Worm&#x27;s-Eye View camera angle example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Angle</span></div>
+      <h3>Worm&#x27;s-Eye View</h3>
+      <p>กล้องอยู่ต่ำมากใกล้พื้นจนตัวแบบดูสูงใหญ่เกินจริง เหมาะกับฉากที่ต้องการความอลังการ น่ากลัว หรือเหนือมนุษย์</p>
+      <div class="use"><b>Feels like</b>ยิ่งใหญ่, อันตราย, น่าเกรงขาม</div>
+      <div class="prompt"><b>Prompt words</b>worm&#x27;s-eye view, extreme low angle, towering subject</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><circle class="ghost" cx="58" cy="39" r="18"/><path class="ghost" d="M35 64 Q58 57 81 64 L81 90 L35 90 Z"/><circle class="subj" cx="130" cy="40" r="14"/><rect class="subj" x="122" y="52" width="16" height="30"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Over-the-Shoulder camera angle example full size"><img src="assets/angles/over-the-shoulder.webp" alt="Over-the-Shoulder camera angle example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Angle</span></div>
+      <h3>Over-the-Shoulder</h3>
+      <p>ใช้ไหล่หรือหลังของคนหนึ่งเป็น foreground เพื่อมองไปยังอีกคนหนึ่ง เหมาะกับบทสนทนา การเผชิญหน้า หรือมุมมองของตัวละคร</p>
+      <div class="use"><b>Feels like</b>บทสนทนา, มุมมอง, ความตึงเครียด</div>
+      <div class="prompt"><b>Prompt words</b>over-the-shoulder shot, foreground shoulder, dialogue scene</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="30" y="18" width="140" height="60"/><circle class="subj" cx="100" cy="48" r="17"/><line class="teal-stroke" x1="30" y1="78" x2="170" y2="18"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View POV (Point of View) camera angle example full size"><img src="assets/angles/pov.webp" alt="POV (Point of View) camera angle example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Angle</span></div>
+      <h3>POV (Point of View)</h3>
+      <p>กล้องแทนสายตาของตัวละครหรือผู้ชม ทำให้รู้สึกว่าเราอยู่ในเหตุการณ์จริง เหมาะกับฉาก immersive หรือ first-person video</p>
+      <div class="use"><b>Feels like</b>อยู่ในเหตุการณ์, เป็นมุมมองส่วนตัว, ใกล้ชิด</div>
+      <div class="prompt"><b>Prompt words</b>point-of-view shot, first-person perspective, immersive</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><circle class="subj" cx="70" cy="40" r="13"/><rect class="subj" x="63" y="52" width="14" height="30"/><circle class="ghost" cx="132" cy="40" r="13"/><rect class="ghost" x="125" y="52" width="14" height="30"/><path class="arrow" d="M84 48 L118 48"/><path class="arrow" d="M112 43 L122 48 L112 53"/></svg></div>
+      <figure class="card-photo">
+        <button type="button" data-zoom aria-label="View Reverse Angle camera angle example full size"><img src="assets/angles/reverse-angle.webp" alt="Reverse Angle camera angle example" loading="lazy"><span class="corner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+        <figcaption>Generated matched example</figcaption>
+      </figure>
+      <div class="card-top"><span class="tag">Angle</span></div>
+      <h3>Reverse Angle</h3>
+      <p>ตัดกลับไปอีกฝั่งของบทสนทนาหรือ action เพื่อให้เห็นปฏิกิริยาและความต่อเนื่องของ eyeline ในฉากเดียวกัน</p>
+      <div class="use"><b>Feels like</b>ปฏิกิริยา, ความต่อเนื่อง, การโต้ตอบ</div>
+      <div class="prompt"><b>Prompt words</b>reverse angle, reaction shot, matching eyeline</div>
+    </article>
+  </div>
+</section>
+
+<section class="band" id="movement">
+  <div class="sec-head">
+    <span class="chip"><i></i>03 &mdash; Camera Movement</span>
+    <h2>Camera <em>Movement</em></h2>
+    <p class="sec-intro">How the camera travels through time and space. Movement changes rhythm, reveals information, and turns an image into an experience.</p>
+  </div>
+  <div class="prompt-rule"><b>Prompt Rule</b>สำหรับ AI video ให้ใช้คำกริยาของกล้อง เช่น <code>slow dolly in</code>, <code>orbit shot</code>, <code>handheld camera</code> แล้วตามด้วย speed/mood เพื่อไม่ให้ motion สุ่ม</div>
+  <div class="grid">
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><circle class="subj" cx="100" cy="48" r="18"/><path class="arrow" d="M50 68 Q100 88 150 68"/><path class="arrow" d="M142 65 L153 67 L145 75"/></svg></div>
+      <div class="card-top"><span class="tag">Movement</span></div>
+      <h3>Pan</h3>
+      <p>The camera rotates horizontally from a fixed position. Reveals space or follows action across the frame.</p>
+      <div class="use"><b>Use it for</b>Reveals, landscapes, following motion.</div>
+      <div class="prompt"><b>Prompt words</b>slow pan from left to right, revealing the scene</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><circle class="subj" cx="100" cy="48" r="18"/><path class="arrow" d="M142 78 Q164 48 142 18"/><path class="arrow" d="M137 26 L142 16 L149 26"/></svg></div>
+      <div class="card-top"><span class="tag">Movement</span></div>
+      <h3>Tilt</h3>
+      <p>The camera rotates vertically. Moves attention from ground to sky or body to face.</p>
+      <div class="use"><b>Use it for</b>Scale reveals, entrances, vertical drama.</div>
+      <div class="prompt"><b>Prompt words</b>slow tilt up, revealing the subject from feet to face</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><circle class="subj" cx="100" cy="48" r="18"/><line class="arrow" x1="28" y1="48" x2="75" y2="48"/><path class="arrow" d="M67 43 L78 48 L67 53"/><rect class="ghost" x="18" y="64" width="58" height="7"/></svg></div>
+      <div class="card-top"><span class="tag">Movement</span></div>
+      <h3>Dolly / Track</h3>
+      <p>The camera physically moves toward, away from, or alongside the subject. Feels spatial and motivated.</p>
+      <div class="use"><b>Use it for</b>Push-ins, reveals, emotional approach.</div>
+      <div class="prompt"><b>Prompt words</b>slow dolly in, camera moves closer, emotional reveal</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><circle class="subj" cx="100" cy="48" r="18"/><line class="arrow" x1="40" y1="72" x2="150" y2="72"/><path class="arrow" d="M142 67 L152 72 L142 77"/><line class="ghost" x1="40" y1="82" x2="150" y2="82"/></svg></div>
+      <div class="card-top"><span class="tag">Movement</span></div>
+      <h3>Truck / Crab</h3>
+      <p>The camera moves sideways while maintaining orientation. Tracks parallel action or shifts perspective.</p>
+      <div class="use"><b>Use it for</b>Walk-and-talk, parallax, lateral reveals.</div>
+      <div class="prompt"><b>Prompt words</b>sideways tracking shot, smooth lateral movement</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><circle class="subj" cx="100" cy="48" r="18"/><line class="arrow" x1="150" y1="78" x2="150" y2="22"/><path class="arrow" d="M144 30 L150 20 L156 30"/></svg></div>
+      <div class="card-top"><span class="tag">Movement</span></div>
+      <h3>Pedestal (Boom)</h3>
+      <p>The camera moves vertically without tilting. Changes height while keeping the frame&#x27;s angle stable.</p>
+      <div class="use"><b>Use it for</b>Reveals over obstacles, status shifts.</div>
+      <div class="prompt"><b>Prompt words</b>camera booms upward, pedestal movement, stable frame</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="ghost" x="44" y="22" width="112" height="52"/><rect class="frame-stroke" x="70" y="34" width="60" height="28"/><circle class="subj" cx="100" cy="48" r="12"/></svg></div>
+      <div class="card-top"><span class="tag">Movement</span></div>
+      <h3>Zoom</h3>
+      <p>The lens changes focal length without moving the camera. Compresses or expands attention optically.</p>
+      <div class="use"><b>Use it for</b>Observation, emphasis, stylized punch.</div>
+      <div class="prompt"><b>Prompt words</b>slow zoom in, lens zoom, optical emphasis</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><circle class="subj" cx="100" cy="58" r="16"/><path class="arrow" d="M42 20 C68 10 132 10 158 20"/><path class="arrow" d="M149 16 L160 21 L150 27"/></svg></div>
+      <div class="card-top"><span class="tag">Movement</span></div>
+      <h3>Crane / Jib</h3>
+      <p>The camera rises, descends, or sweeps from a mounted arm. Adds elegance and expanded geography.</p>
+      <div class="use"><b>Use it for</b>Grand reveals, endings, transitions.</div>
+      <div class="prompt"><b>Prompt words</b>crane shot rising above the subject, elegant reveal</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><path class="teal-stroke" d="M42 66 C68 30 122 72 158 34"/><circle class="subj" cx="100" cy="48" r="16"/></svg></div>
+      <div class="card-top"><span class="tag">Movement</span></div>
+      <h3>Steadicam / Gimbal</h3>
+      <p>Smooth mobile camera movement through space. Feels present but controlled.</p>
+      <div class="use"><b>Use it for</b>Immersion, following characters, fluid scenes.</div>
+      <div class="prompt"><b>Prompt words</b>smooth gimbal shot, fluid camera movement, stable motion</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><path class="ghost" d="M40 28 L52 38 L42 50 L56 64 L46 78"/><circle class="subj" cx="112" cy="48" r="17"/><path class="arrow" d="M34 28 L48 34 M34 48 L48 54 M34 68 L48 74"/></svg></div>
+      <div class="card-top"><span class="tag">Movement</span></div>
+      <h3>Handheld</h3>
+      <p>The camera is carried by a person, with visible instability. Adds urgency, realism, or documentary energy.</p>
+      <div class="use"><b>Use it for</b>Chaos, intimacy, realism.</div>
+      <div class="prompt"><b>Prompt words</b>subtle handheld camera, natural shake, documentary realism</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><circle class="ghost" cx="54" cy="48" r="14"/><circle class="subj" cx="146" cy="48" r="14"/><path class="arrow" d="M64 48 C88 22 116 22 138 48"/><path class="arrow" d="M128 44 L140 49 L130 56"/></svg></div>
+      <div class="card-top"><span class="tag">Movement</span></div>
+      <h3>Whip Pan</h3>
+      <p>A very fast pan that blurs the frame. Creates impact, surprise, or energetic transitions.</p>
+      <div class="use"><b>Use it for</b>Comedy, action, transitions.</div>
+      <div class="prompt"><b>Prompt words</b>fast whip pan transition, motion blur, sudden reveal</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="ghost" x="32" y="16" width="136" height="68"/><rect class="frame-stroke" x="56" y="28" width="88" height="44"/><circle class="subj" cx="100" cy="50" r="15"/><path class="arrow" d="M30 86 L70 72 M170 86 L130 72"/></svg></div>
+      <div class="card-top"><span class="tag">Movement</span></div>
+      <h3>Dolly Zoom (Vertigo)</h3>
+      <p>The camera moves while zooming in the opposite direction. Warps depth around a stable subject.</p>
+      <div class="use"><b>Use it for</b>Shock, realization, disorientation.</div>
+      <div class="prompt"><b>Prompt words</b>dolly zoom, background warps, subject stays centered</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><circle class="subj" cx="100" cy="48" r="16"/><ellipse class="ghost" cx="100" cy="48" rx="62" ry="30"/><path class="arrow" d="M154 47 L164 50 L155 57"/></svg></div>
+      <div class="card-top"><span class="tag">Movement</span></div>
+      <h3>Arc Shot</h3>
+      <p>The camera travels around the subject in a curve. Builds romance, tension, or a hero reveal.</p>
+      <div class="use"><b>Use it for</b>Product reveals, realization, relationship beats.</div>
+      <div class="prompt"><b>Prompt words</b>slow orbit shot, camera arcs around the subject</div>
+    </article>
+  </div>
+</section>
+
+<section class="band" id="lighting">
+  <div class="sec-head">
+    <span class="chip"><i></i>04 &mdash; Lighting</span>
+    <h2><em>Lighting</em></h2>
+    <p class="sec-intro">Light defines shape, depth, mood, and genre. In prompts, lighting words often matter more than style labels like &quot;cinematic&quot;.</p>
+  </div>
+  <div class="prompt-rule"><b>Prompt Rule</b>อย่าเขียนแค่ <code>cinematic lighting</code> ให้ระบุแหล่งไฟและ mood เช่น <code>soft key light, red rim light, deep shadows, warm practical lights</code></div>
+  <div class="callout">
+    <h4>Prompt Lighting Stack</h4>
+    <p>สูตรง่าย: <code>key light</code> กำหนดหน้าหลัก, <code>rim/back light</code> แยก subject จากฉาก, <code>practical light</code> ทำให้ฉากจริง, และ <code>color grade</code> ล็อก mood สุดท้าย</p>
+  </div>
+  <div class="light-grid">
+    <article class="lcard cream">
+      <div class="lcard-top">
+        <h3>Key Light</h3>
+        <span class="lsub">Main source</span>
+      </div>
+      <p>The dominant light that shapes the subject. Its size, angle, and softness decide the image&#x27;s primary character.</p>
+      <div class="lprompt"><b>Prompt words</b>soft key light from camera left</div>
+    </article>
+    <article class="lcard orange">
+      <div class="lcard-top">
+        <h3>Fill Light</h3>
+        <span class="lsub">Shadow control</span>
+      </div>
+      <p>Light used to soften shadows created by the key. More fill feels cleaner; less fill feels dramatic.</p>
+      <div class="lprompt"><b>Prompt words</b>low fill light, controlled shadows</div>
+    </article>
+    <article class="lcard dark">
+      <div class="lcard-top">
+        <h3>Back Light / Rim</h3>
+        <span class="lsub">Separation</span>
+      </div>
+      <p>Light from behind creates an edge around the subject, separating them from the background.</p>
+      <div class="lprompt"><b>Prompt words</b>red rim light, glowing edge highlight</div>
+    </article>
+    <article class="lcard cream">
+      <div class="lcard-top">
+        <h3>Practical Light</h3>
+        <span class="lsub">Visible source</span>
+      </div>
+      <p>A light source visible in the scene: lamps, screens, neon, candles. Grounds the lighting in reality.</p>
+      <div class="lprompt"><b>Prompt words</b>warm practical lights in the background</div>
+    </article>
+    <article class="lcard orange">
+      <div class="lcard-top">
+        <h3>High-Key</h3>
+        <span class="lsub">Bright mood</span>
+      </div>
+      <p>Low contrast, bright, clean lighting. Feels commercial, friendly, and open.</p>
+      <div class="lprompt"><b>Prompt words</b>high-key lighting, bright clean shadows</div>
+    </article>
+    <article class="lcard dark">
+      <div class="lcard-top">
+        <h3>Low-Key</h3>
+        <span class="lsub">Dark mood</span>
+      </div>
+      <p>High contrast with deep shadows. Feels dramatic, premium, mysterious, or dangerous.</p>
+      <div class="lprompt"><b>Prompt words</b>low-key lighting, deep black shadows</div>
+    </article>
+    <article class="lcard cream">
+      <div class="lcard-top">
+        <h3>Chiaroscuro</h3>
+        <span class="lsub">Light vs dark</span>
+      </div>
+      <p>Strong contrast between illuminated and shadowed areas. Sculptural, painterly, and theatrical.</p>
+      <div class="lprompt"><b>Prompt words</b>chiaroscuro lighting, sculpted face</div>
+    </article>
+    <article class="lcard orange">
+      <div class="lcard-top">
+        <h3>Silhouette</h3>
+        <span class="lsub">Shape first</span>
+      </div>
+      <p>The subject is dark against a brighter background. Emphasizes outline, mystery, and graphic shape.</p>
+      <div class="lprompt"><b>Prompt words</b>silhouette against red backlight</div>
+    </article>
+    <article class="lcard dark">
+      <div class="lcard-top">
+        <h3>Motivated Light</h3>
+        <span class="lsub">Story logic</span>
+      </div>
+      <p>Light appears to come from a believable source inside the world of the scene.</p>
+      <div class="lprompt"><b>Prompt words</b>motivated by laptop screen glow</div>
+    </article>
+    <article class="lcard cream">
+      <div class="lcard-top">
+        <h3>Golden Hour</h3>
+        <span class="lsub">Warm natural</span>
+      </div>
+      <p>Low warm sunlight creates softness, nostalgia, and long shadows.</p>
+      <div class="lprompt"><b>Prompt words</b>golden hour side light, warm highlights</div>
+    </article>
+    <article class="lcard orange">
+      <div class="lcard-top">
+        <h3>Neon / Color Contrast</h3>
+        <span class="lsub">Stylized</span>
+      </div>
+      <p>Colored light creates genre and brand identity. Use sparingly for a strong visual signature.</p>
+      <div class="lprompt"><b>Prompt words</b>black and deep orange color grade</div>
+    </article>
+    <article class="lcard dark">
+      <div class="lcard-top">
+        <h3>Volumetric Light</h3>
+        <span class="lsub">Atmosphere</span>
+      </div>
+      <p>Light visible through haze, smoke, mist, or dust. Adds depth and cinematic air.</p>
+      <div class="lprompt"><b>Prompt words</b>volumetric light beams through haze</div>
+    </article>
+  </div>
+</section>
+
+<section class="band" id="composition">
+  <div class="sec-head">
+    <span class="chip"><i></i>05 &mdash; Composition</span>
+    <h2>Composition <em>&amp; Framing Rules</em></h2>
+    <p class="sec-intro">How elements are arranged within the frame - and the continuity rules that keep space coherent across cuts.</p>
+  </div>
+  <div class="prompt-rule"><b>Prompt Rule</b>ถ้าจะทำ thumbnail, poster หรือ course cover ให้ใส่ composition ด้วย เช่น <code>subject on right third, negative space on left for title text</code> เพื่อเหลือพื้นที่วางตัวหนังสือ</div>
+  <div class="grid">
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="25" y="18" width="150" height="60"/><line class="ghost" x1="75" y1="18" x2="75" y2="78"/><line class="ghost" x1="125" y1="18" x2="125" y2="78"/><line class="ghost" x1="25" y1="38" x2="175" y2="38"/><line class="ghost" x1="25" y1="58" x2="175" y2="58"/><circle class="subj" cx="125" cy="38" r="6"/></svg></div>
+      <div class="card-top"><span class="tag">Composition</span></div>
+      <h3>Rule of Thirds</h3>
+      <p>Divide the frame into a 3x3 grid; place key subjects on the lines or intersections. Naturally balanced and dynamic.</p>
+      <div class="use"><b>Effect</b>Balance, energy, intentional placement.</div>
+      <div class="prompt"><b>Prompt words</b>subject on the right third, rule of thirds composition</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="30" y="18" width="140" height="60"/><path class="ghost" d="M34 78 C70 54 86 40 116 36 C136 34 150 24 158 18"/><circle class="subj" cx="116" cy="36" r="6"/></svg></div>
+      <div class="card-top"><span class="tag">Composition</span></div>
+      <h3>Golden Ratio / Spiral</h3>
+      <p>A Fibonacci spiral guides the eye to a natural focal point. A more organic, classical alternative to thirds.</p>
+      <div class="use"><b>Effect</b>Harmony, elegance, natural flow.</div>
+      <div class="prompt"><b>Prompt words</b>golden ratio composition, eye follows a natural spiral</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="25" y="18" width="150" height="60"/><line class="ghost" x1="25" y1="78" x2="105" y2="38"/><line class="ghost" x1="175" y1="78" x2="105" y2="38"/><circle class="subj" cx="105" cy="38" r="6"/></svg></div>
+      <div class="card-top"><span class="tag">Composition</span></div>
+      <h3>Leading Lines</h3>
+      <p>Roads, rails, architecture, or gazes draw the eye toward the subject or into depth. Powerful directional control.</p>
+      <div class="use"><b>Effect</b>Focus, depth, movement, direction.</div>
+      <div class="prompt"><b>Prompt words</b>strong leading lines guiding the eye to the subject</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="28" y="18" width="144" height="60"/><rect class="ghost" x="58" y="30" width="84" height="36"/><circle class="subj" cx="100" cy="48" r="8"/></svg></div>
+      <div class="card-top"><span class="tag">Composition</span></div>
+      <h3>Frame Within a Frame</h3>
+      <p>Use doorways, windows, arches, or foreground objects to frame the subject. Adds depth, focus, and containment.</p>
+      <div class="use"><b>Effect</b>Depth, isolation, voyeurism.</div>
+      <div class="prompt"><b>Prompt words</b>frame within a frame, foreground doorway framing subject</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="30" y="18" width="140" height="60"/><line class="ghost" x1="100" y1="18" x2="100" y2="78"/><circle class="subj" cx="100" cy="48" r="9"/></svg></div>
+      <div class="card-top"><span class="tag">Composition</span></div>
+      <h3>Symmetry / Centered</h3>
+      <p>A perfectly balanced, centered frame. Feels formal, controlled, and deliberate.</p>
+      <div class="use"><b>Effect</b>Order, power, formality, stillness.</div>
+      <div class="prompt"><b>Prompt words</b>perfectly centered composition, symmetrical frame</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="28" y="18" width="144" height="60"/><circle class="subj" cx="118" cy="44" r="12"/><rect class="subj" x="110" y="56" width="16" height="20"/><path class="arrow" d="M62 42 L96 42"/><text x="50" y="57" fill="#D9C3AB" font-size="6">lead room</text></svg></div>
+      <div class="card-top"><span class="tag">Composition</span></div>
+      <h3>Lead Room &amp; Headroom</h3>
+      <p>Leave space in the direction a subject looks or moves and appropriate gap above the head.</p>
+      <div class="use"><b>Effect</b>Comfort, balance, anticipation.</div>
+      <div class="prompt"><b>Prompt words</b>ample lead room, natural headroom, clean breathing space</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="28" y="18" width="144" height="60"/><circle class="subj" cx="62" cy="58" r="13"/><circle fill="#A7A7A7" cx="100" cy="48" r="8"/><circle fill="#646464" cx="138" cy="34" r="5"/></svg></div>
+      <div class="card-top"><span class="tag">Composition</span></div>
+      <h3>Depth / Layering</h3>
+      <p>Stack distinct foreground, midground, and background planes. Turns a flat image into a deep dimensional world.</p>
+      <div class="use"><b>Effect</b>Dimension, immersion, richness.</div>
+      <div class="prompt"><b>Prompt words</b>foreground, midground, background layers, cinematic depth</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="28" y="18" width="144" height="60"/><line class="ghost" x1="40" y1="68" x2="160" y2="68"/><path class="arrow" d="M55 62 Q100 48 145 62"/><text x="62" y="74" fill="#E85002" font-size="6">stay on one side</text><circle class="subj" cx="88" cy="42" r="8"/><circle class="ghost" cx="132" cy="42" r="8"/></svg></div>
+      <div class="card-top"><span class="tag">Continuity Rule</span></div>
+      <h3>The 180° Rule</h3>
+      <p>Keep the camera on one side of an imaginary axis between subjects so screen directions stay consistent across cuts.</p>
+      <div class="use"><b>Effect</b>Spatial clarity, coherent geography.</div>
+      <div class="prompt"><b>Prompt words</b>consistent screen direction, 180-degree rule, clear eyeline</div>
+    </article>
+    <article class="card">
+      <div class="glyph"><svg viewBox="0 0 200 96"><rect class="frame-stroke" x="38" y="22" width="124" height="52"/><circle class="subj" cx="114" cy="44" r="9"/><line class="ghost" x1="55" y1="70" x2="110" y2="44"/><line class="ghost" x1="78" y1="70" x2="110" y2="44"/><text x="75" y="34" fill="#E85002" font-size="7">shift 30°</text></svg></div>
+      <div class="card-top"><span class="tag">Continuity Rule</span></div>
+      <h3>The 30° Rule</h3>
+      <p>When cutting to the same subject, change the angle by at least 30 degrees or change shot size. Otherwise the cut reads as a jump cut.</p>
+      <div class="use"><b>Effect</b>Smooth, invisible editing.</div>
+      <div class="prompt"><b>Prompt words</b>30-degree angle shift, matching subject, smooth cut</div>
+    </article>
+  </div>
+</section>
+
+<section class="band" id="examples">
+  <div class="sec-head">
+    <span class="chip"><i></i>06 &mdash; Examples</span>
+    <h2>Matched Visual <em>Examples</em></h2>
+    <p class="sec-intro">Examples of image composition arranged according to the Composition &amp; Framing Rules above.</p>
+  </div>
+  <div class="examples">
+    <article class="example-card">
+      <button type="button" class="example-visual" data-zoom aria-label="View Rule of Thirds example full size">
+        <img src="assets/examples/rule-of-thirds.webp" alt="Hot air balloon positioned near a rule-of-thirds intersection" loading="lazy">
+        <span class="thirds-overlay" aria-hidden="true"></span>
+      </button>
+      <div class="example-copy">
+        <span class="label">Composition Example</span>
+        <h4>Rule of Thirds</h4>
+        <p>วาง subject ใกล้จุดตัดของ grid และให้พื้นที่รอบตัวช่วยเล่า scale ของฉาก Prompt ควรระบุทั้งตำแหน่ง subject และพื้นที่ว่าง</p>
+        <span class="source">Generated example</span>
+      </div>
+    </article>
+    <article class="example-card">
+      <button type="button" class="example-visual" data-zoom aria-label="View Leading Lines example full size">
+        <img src="assets/examples/leading-lines.webp" alt="Railway tracks creating strong leading lines into the frame" loading="lazy">
+        <span class="svg-overlay" aria-hidden="true"><svg viewBox="0 0 1600 1000" preserveAspectRatio="none">
+        <path d="M120 1000 L760 420" stroke="#E85002" stroke-width="7" fill="none"/>
+        <path d="M1480 1000 L840 420" stroke="#E85002" stroke-width="7" fill="none"/>
+        <circle cx="800" cy="420" r="18" fill="#F9F9F9"/></svg></span>
+      </button>
+      <div class="example-copy">
+        <span class="label">Composition Example</span>
+        <h4>Leading Lines</h4>
+        <p>เส้นรางนำสายตาไปยังจุดลึกของภาพ เหมาะกับ prompt ที่ต้องการ depth และทิศทางการมองที่ชัด</p>
+        <span class="source">Generated example</span>
+      </div>
+    </article>
+    <article class="example-card">
+      <button type="button" class="example-visual" data-zoom aria-label="View Frame Within a Frame example full size">
+        <img src="assets/examples/frame-within-a-frame.webp" alt="Window frame used as an internal frame inside the photo" loading="lazy">
+        
+      </button>
+      <div class="example-copy">
+        <span class="label">Composition Example</span>
+        <h4>Frame Within a Frame</h4>
+        <p>ใช้กรอบหน้าต่างเป็นกรอบย่อยภายในภาพ ช่วยบังคับสายตาและทำให้ภาพมีชั้น foreground/background</p>
+        <span class="source">Generated example</span>
+      </div>
+    </article>
+    <article class="example-card">
+      <button type="button" class="example-visual" data-zoom aria-label="View Symmetry / Centered example full size">
+        <img src="assets/examples/symmetry-centered.webp" alt="Centered corridor showing symmetrical composition" loading="lazy">
+        <span class="center-axis" aria-hidden="true"></span>
+      </button>
+      <div class="example-copy">
+        <span class="label">Composition Example</span>
+        <h4>Symmetry / Centered</h4>
+        <p>เส้นกลางและผนังสองฝั่งเท่ากัน ทำให้ภาพนิ่ง เป็นระเบียบ และดู intentional เหมาะกับงาน premium/architecture</p>
+        <span class="source">Generated example</span>
+      </div>
+    </article>
+    <article class="example-card">
+      <button type="button" class="example-visual" data-zoom aria-label="View Depth / Layering example full size">
+        <img src="assets/examples/depth-layering.webp" alt="Trees in foreground with mountain layers in the background" loading="lazy">
+        <span class="svg-overlay" aria-hidden="true"><svg viewBox="0 0 1600 1000" preserveAspectRatio="none">
+        <rect x="0" y="0" width="1600" height="330" fill="rgba(232,80,2,.13)"/>
+        <rect x="0" y="330" width="1600" height="330" fill="rgba(241,96,1,.13)"/>
+        <rect x="0" y="660" width="1600" height="340" fill="rgba(217,195,171,.13)"/>
+        <text x="52" y="120" fill="#fff" font-size="46" font-family="monospace">BACKGROUND</text>
+        <text x="52" y="495" fill="#fff" font-size="46" font-family="monospace">MIDGROUND</text>
+        <text x="52" y="835" fill="#fff" font-size="46" font-family="monospace">FOREGROUND</text></svg></span>
+      </button>
+      <div class="example-copy">
+        <span class="label">Composition Example</span>
+        <h4>Depth / Layering</h4>
+        <p>แยก foreground, midground, background เพื่อให้ภาพไม่แบน Prompt ควรสั่ง layer ชัดเมื่ออยากได้ภาพ cinematic depth</p>
+        <span class="source">Generated example</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="presented">
+    <span>Presented by</span>
+    <svg class="logo" viewBox="0 0 960.2 412.4" role="img" aria-label="ALT" xmlns="http://www.w3.org/2000/svg"><polygon class="alt-f" points="465.5 284.5 465.5 65.1 430.1 65.1 394.6 100.6 394.6 256.2 365.7 285 415.9 335.2 466 285 465.5 284.5"/> <polygon class="alt-o" points="628.7 278 628.7 242.5 611 242.5 557.8 242.5 557.8 65.1 522.3 65.1 486.8 100.6 486.8 313.4 540 313.4 557.8 313.4 593.2 313.4 628.7 278"/> <polygon class="alt-f" points="960.2 164.1 960.2 126 884 126 884 65.1 845.9 65.1 807.8 103.2 807.8 335.5 845.9 335.5 884 297.4 884 202.2 922.1 202.2 960.2 164.1"/> <path class="alt-fs" d="M808.2,126v76.2h-76.2v-38.1l38.1-38.1h38.1ZM808.2,124h-38.1c-.5,0-1,.2-1.4.6l-38.1,38.1c-.4.4-.6.9-.6,1.4v38.1c0,1.1.9,2,2,2h76.2c1.1,0,2-.9,2-2v-76.2c0-1.1-.9-2-2-2h0Z"/> <polygon class="alt-f" points="0 65.1 0 132.6 188.7 132.6 188.7 138.4 160.7 166.4 208.5 214.2 256.2 166.4 256.2 132.6 256.2 98.9 256.2 65.1 0 65.1"/> <polygon class="alt-f" points="107.9 195.4 107.9 235 56 286.8 103.8 334.6 175.4 263 175.4 263 175.4 195.4 107.9 195.4"/> <polygon class="alt-o" points="259.6 288.7 259.6 221.1 70.9 221.1 70.9 215.4 98.8 187.4 51.1 139.6 3.3 187.4 3.3 221.1 3.3 254.9 3.3 288.7 259.6 288.7"/> <rect class="alt-fs" x="283.6" y="379.7" width="72.8" height="7.3" transform="translate(-177.4 338.6) rotate(-45)"/> <rect class="alt-o thin" x="638" y="25.4" width="72.8" height="7.3" transform="translate(177 485.4) rotate(-45)"/></svg>
+  </div>
+</footer>
+</div>
+
+<button class="to-top" id="to-top" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" type="button" aria-label="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+._*
+
+# Local tooling / editor state
+.claude/
+CLAUDE.md
+
+# Working notes written while researching the build
+image-study.md
+design-direction.md
+layout-blueprint.md
+
+# Mirror of the third-party site this project was researched from — not ours to republish
+/reference-site.html
+/assets/
+
+# Third-party design references (other designers' work) and internal review screenshots
+/Design Reference/
+/Feedback/
+
+# Full-resolution generated masters (~32 MB). The site ships optimised WebP in site/assets/
+/Output/
+
+# Credentials — never commit
+/GitHub/
+*token*.txt
+*.pem
+.env
+.env.*

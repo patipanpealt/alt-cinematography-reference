@@ -1,0 +1,418 @@
+{
+  "site": {
+    "title": "ZenityX Cinematography Reference - Shots, Angles, Movement & Light",
+    "description": "ZenityX cinematography reference for AI image and video prompts: shot sizes, camera angles, movement, lighting, and composition.",
+    "lang": "en (body copy mixes English + Thai)",
+    "sourceUrl": "https://zenityx-cinematic-guide.netlify.app",
+    "type": "single-page, no JavaScript, all CSS inline in <head>",
+    "fonts": {
+      "display": "Bebas Neue (h1, h2, callout h4, footer big)",
+      "body": "Fraunces (serif, weight 300 default; 500 for card h3/row names)",
+      "mono": "Space Mono (kickers, tags, prompt words, meta)",
+      "thai": "Noto Sans Thai (class .thai)"
+    },
+    "palette": {
+      "--bg": "#08080a",
+      "--bg-soft": "#111114",
+      "--panel": "#17171b",
+      "--panel-2": "#1d1d22",
+      "--ink": "#f2eee7",
+      "--ink-dim": "#a49d92",
+      "--ink-faint": "#68645f",
+      "--gold": "#e4a842",
+      "--gold-deep": "#b8741e",
+      "--red": "#ff1515",
+      "--red-deep": "#9d0707",
+      "--teal": "#62d2c6",
+      "--line": "#2d2d35"
+    },
+    "designNotes": [
+      "Dark editorial/film-magazine look. Fixed SVG fractal-noise grain overlay on body::after at opacity .04, z-index 9999, pointer-events none.",
+      "Hero min-height 96vh with two radial gradients (red at 77%/31%, gold at 9%/90%) over a near-black linear gradient.",
+      "Four 34x34px L-shaped corner brackets in the hero (.corner tl/tr/bl/br), 1px solid --ink-faint.",
+      "Sticky translucent nav (rgba(8,8,10,.88) + blur(12px)); links turn red with red border on hover.",
+      "Every section: numbered red badge (.sec-num) + huge Bebas h2 + italic intro + a red-bordered 'ZenityX Prompt Rule' box (.prompt-lab).",
+      "Cards: --panel bg, 1px --line border, 4px radius; on hover lift -3px, border --gold-deep, and a 2px red→gold→transparent top bar scales in from the left.",
+      "Each card has a hand-drawn inline SVG diagram (.glyph, 96px tall, viewBox 0 0 200 96) using shared classes: .frame-stroke, .subj, .subj-line, .ghost (dashed), .arrow (red), .lite, .teal-stroke, .red-fill.",
+      "Shot Sizes and Camera Angles cards additionally carry a 3:4 photo (object-fit:contain) with caption 'Generated matched example'. Movement and Composition cards are diagram-only.",
+      "Lighting uses a row layout instead of cards: grid 190px | 1fr | minmax(220px,360px), with a red left border on the prompt column; collapses to one column under 900px.",
+      "::selection is red on white.",
+      "Responsive: <=900px rows collapse; <=600px hero gets 7rem top padding, .brand-row .mark hidden, grid becomes single column."
+    ],
+    "assets": {
+      "logo": "assets/zenityx-logo.png (hero brand-row ~96-154px wide, footer 142px)",
+      "shots": "assets/shots/{extreme-wide,wide-long,full-shot,medium-long-cowboy,medium-shot,medium-close-up,close-up,extreme-close-up,insert-cutaway,two-shot}.jpg",
+      "angles": "assets/angles/{eye-level,high-angle,low-angle,dutch-canted,overhead-top,birds-eye,worms-eye,over-the-shoulder,pov,reverse-angle}.jpg",
+      "examples": "assets/examples/{rule-of-thirds,leading-lines,frame-within-frame,symmetry,depth-layering}.jpg"
+    }
+  },
+
+  "hero": {
+    "brandMark": "AI Image + Video Prompt Reference",
+    "kicker": "ZenityX Field Reference for AI Creators",
+    "h1": "The Language of the <em>Lens</em>   (\"Lens\" in red, line break after \"The Language\")",
+    "sub": "A complete reference to shot sizes, camera angles, camera movement, lighting, and composition - the visual grammar of cinema.",
+    "thaiNote": "เวอร์ชันนี้ยังเก็บเนื้อหา reference เดิมเป็นหลัก แล้วเพิ่มภาษาการเขียน prompt เพื่อให้เอาไปใช้กับ AI image/video ได้ตรงขึ้น โดยไม่แทน diagram ด้วยภาพ stock ที่ไม่ตรงบริบท",
+    "meta": [
+      { "label": "Sections", "value": "05" },
+      { "label": "Techniques", "value": "70+" },
+      { "label": "Discipline", "value": "Cinematography" },
+      { "label": "Prompt Layer", "value": "ZenityX" }
+    ]
+  },
+
+  "nav": [
+    { "href": "#shots", "text": "01 - Shot Sizes" },
+    { "href": "#angles", "text": "02 - Camera Angles" },
+    { "href": "#movement", "text": "03 - Camera Movement" },
+    { "href": "#lighting", "text": "04 - Lighting" },
+    { "href": "#composition", "text": "05 - Composition" }
+  ],
+
+  "sections": [
+    {
+      "id": "shots",
+      "num": "01",
+      "title": "Shot Sizes & Framing",
+      "intro": "How much of the subject and environment fills the frame. Shot size controls intimacy, scale, and where the audience's attention lands.",
+      "promptRule": "เวลาเขียน prompt ให้ใส่ shot size ตั้งแต่ต้นประโยค เช่น `cinematic close-up shot of...` เพราะนี่คือคำสั่งที่บอก AI ว่าภาพควร \"ใกล้หรือไกล\" แค่ไหน",
+      "layout": "cards + photos",
+      "cardLabels": { "tag": "Shot Size", "useLabel": "Use it for", "promptLabel": "Prompt words" },
+      "cards": [
+        {
+          "name": "Extreme Wide Shot",
+          "abbr": "EWS / XLS",
+          "photo": "assets/shots/extreme-wide.jpg",
+          "desc": "ตัวแบบเล็กมากเมื่อเทียบกับพื้นที่รอบตัว ภาพเน้น scale และบรรยากาศมากกว่ารายละเอียดของคน",
+          "use": "เปิดสถานที่, ความโดดเดี่ยว, ความยิ่งใหญ่, scale ของฉาก",
+          "prompt": "extreme wide shot, tiny subject, vast environment, cinematic scale",
+          "glyph": "frame + dashed horizon line low; 3px dot + tiny 3x6 body at center"
+        },
+        {
+          "name": "Wide / Long Shot",
+          "abbr": "WS / LS",
+          "photo": "assets/shots/wide-long.jpg",
+          "desc": "เห็นตัวแบบเต็มตัวพร้อมพื้นที่รอบ ๆ มากพอให้เข้าใจว่าอยู่ที่ไหนและกำลังอยู่ในบริบทแบบใด",
+          "use": "เปิดฉาก, action context, blocking, ให้เห็นพื้นที่",
+          "prompt": "wide shot, full body visible, environment context, spatial geography",
+          "glyph": "frame + dashed ground; r=6 head, 8x25 body"
+        },
+        {
+          "name": "Full Shot",
+          "abbr": "FS",
+          "photo": "assets/shots/full-shot.jpg",
+          "desc": "เห็นร่างกายครบตั้งแต่หัวถึงเท้า เหมาะเมื่อท่าทาง การแต่งตัว หรือ posture สำคัญต่อเรื่อง",
+          "use": "ท่าทาง, ชุด, body language, การยืนหรือเคลื่อนไหว",
+          "prompt": "full shot, head-to-toe framing, clear body language",
+          "glyph": "r=10 head, 16x50 body filling frame height"
+        },
+        {
+          "name": "Medium Long / Cowboy",
+          "abbr": "MLS / Cowboy",
+          "photo": "assets/shots/medium-long-cowboy.jpg",
+          "desc": "กรอบภาพประมาณเข่าหรือหน้าขาขึ้นไป ยังเห็น body language แต่เริ่มเข้าใกล้ความรู้สึกของตัวละครมากขึ้น",
+          "use": "ฉากเผชิญหน้า, walk-and-talk, pose ที่ต้องเห็นมือและลำตัว",
+          "prompt": "medium long shot, cowboy shot, knees-up framing",
+          "glyph": "r=13 head, 22x56 body cropped at frame bottom"
+        },
+        {
+          "name": "Medium Shot",
+          "abbr": "MS",
+          "photo": "assets/shots/medium-shot.jpg",
+          "desc": "กรอบภาพประมาณเอวขึ้นไป เป็นระยะที่สมดุลระหว่างสีหน้า มือ ลำตัว และบริบท เหมาะกับคอนเทนต์พูดกับกล้อง",
+          "use": "บทสนทนา, interview, talking head, neutral coverage",
+          "prompt": "medium shot, waist-up framing, natural conversation distance",
+          "glyph": "r=16 head + curved shoulder path to frame bottom"
+        },
+        {
+          "name": "Medium Close-Up",
+          "abbr": "MCU",
+          "photo": "assets/shots/medium-close-up.jpg",
+          "desc": "เห็นช่วงอกถึงศีรษะ ทำให้สีหน้าเด่นขึ้น แต่ยังมีไหล่และลำตัวเล็กน้อยเพื่อไม่ให้ภาพแน่นเกินไป",
+          "use": "อารมณ์, reaction, คำพูดสำคัญ, course hero portrait",
+          "prompt": "medium close-up, chest-up framing, expressive face",
+          "glyph": "r=22 head + wider shoulder path"
+        },
+        {
+          "name": "Close-Up",
+          "abbr": "CU",
+          "photo": "assets/shots/close-up.jpg",
+          "desc": "ใบหน้าหรือวัตถุหลักครองพื้นที่ส่วนใหญ่ของภาพ ตัดสิ่งรบกวนออกเพื่อดึงความรู้สึกหรือรายละเอียดให้ชัด",
+          "use": "อารมณ์พีค, ความใกล้ชิด, reveal, thumbnail สีหน้าชัด",
+          "prompt": "close-up shot, shallow depth of field, sharp eyes",
+          "glyph": "single r=34 gold circle filling the frame"
+        },
+        {
+          "name": "Extreme Close-Up",
+          "abbr": "ECU / XCU",
+          "photo": "assets/shots/extreme-close-up.jpg",
+          "desc": "รายละเอียดเล็กมากเต็มกรอบภาพ เช่น ดวงตา ผิว หรือ texture ทำให้ภาพเข้มข้น น่าสงสัย หรือเน้นสัมผัส",
+          "use": "ความตึงเครียด, รายละเอียด, macro, texture",
+          "prompt": "extreme close-up, macro detail, intense focus",
+          "glyph": "eye: gold ellipse 60x30 + dark pupil r=14 + gold catchlight r=6"
+        },
+        {
+          "name": "Insert / Cutaway",
+          "abbr": "Insert",
+          "photo": "assets/shots/insert-cutaway.jpg",
+          "desc": "ภาพแทรกของวัตถุหรือรายละเอียดเฉพาะที่คนดูต้องเห็น เช่น มือจับเลนส์ ปุ่ม เครื่องมือ หรือหลักฐานในเรื่อง",
+          "use": "วัตถุสำคัญ, story beat, product detail, transition",
+          "prompt": "insert shot, detailed object, story clue, tactile texture",
+          "glyph": "small gold rounded rect object with a dark slot line"
+        },
+        {
+          "name": "Two-Shot",
+          "abbr": "2-Shot",
+          "photo": "assets/shots/two-shot.jpg",
+          "desc": "มีตัวแบบสองคนอยู่ในกรอบเดียวกัน ระยะห่าง ตำแหน่ง และขนาดของแต่ละคนบอกความสัมพันธ์และ tension",
+          "use": "ความสัมพันธ์, บทสนทนา, tension, dialogue geography",
+          "prompt": "two-shot, two subjects in frame, relationship tension",
+          "glyph": "solid gold figure left + dashed ghost figure right"
+        }
+      ]
+    },
+
+    {
+      "id": "angles",
+      "num": "02",
+      "title": "Camera Angles",
+      "intro": "Where the camera sits relative to the subject. Angle is psychology - it dictates power, vulnerability, and the viewer's emotional alignment.",
+      "promptRule": "ใส่ angle หลัง subject/action เช่น `low angle, looking up at the founder` เพื่อคุมความรู้สึกของคนดู ไม่ใช่แค่ตำแหน่งกล้อง",
+      "layout": "cards + photos",
+      "cardLabels": { "tag": "Angle", "useLabel": "Feels like", "promptLabel": "Prompt words" },
+      "cards": [
+        {
+          "name": "Eye-Level",
+          "photo": "assets/angles/eye-level.jpg",
+          "desc": "กล้องอยู่ระดับสายตาของตัวแบบ ให้ความรู้สึกเป็นกลาง เป็นธรรมชาติ และเหมือนเรากำลังยืนคุยกับคนตรงหน้า",
+          "use": "สมจริง, เท่าเทียม, เป็นกลาง",
+          "prompt": "eye-level angle, natural perspective, human connection",
+          "glyph": "figure center + horizontal red arrow entering from the left at head height"
+        },
+        {
+          "name": "High Angle",
+          "photo": "assets/angles/high-angle.jpg",
+          "desc": "กล้องอยู่สูงและมองลงมา ทำให้ตัวแบบดูเล็กลง ถูกสังเกต หรือมีความเปราะบาง เหมาะกับฉากที่อยากลดพลังของตัวละคร",
+          "use": "เปราะบาง, พ่ายแพ้, ตัวเล็กลง",
+          "prompt": "high angle, looking down, vulnerable subject",
+          "glyph": "red arrow angling down from upper-left onto the figure"
+        },
+        {
+          "name": "Low Angle",
+          "photo": "assets/angles/low-angle.jpg",
+          "desc": "กล้องอยู่ต่ำและเงยขึ้น ทำให้ตัวแบบดูมีอำนาจ สูงใหญ่ หรือเป็น hero moment ใช้ดีมากกับภาพเปิดตัวสินค้า/ผู้สอน",
+          "use": "ทรงพลัง, มีอำนาจ, น่าเกรงขาม",
+          "prompt": "low angle shot, heroic scale, powerful silhouette",
+          "glyph": "red arrow angling up from lower-left onto the figure"
+        },
+        {
+          "name": "Dutch / Canted",
+          "photo": "assets/angles/dutch-canted.jpg",
+          "desc": "เอียงเส้นขอบฟ้าหรือแกนภาพ ทำให้ภาพเสียสมดุลโดยตั้งใจ เหมาะกับความตึงเครียด ความสับสน หรือฉากที่อยากให้รู้สึกไม่ปกติ",
+          "use": "วุ่นวาย, กดดัน, เสียสมดุล",
+          "prompt": "dutch angle, tilted horizon, psychological tension",
+          "glyph": "whole frame + figure rotated -11deg"
+        },
+        {
+          "name": "Overhead / Top Shot",
+          "photo": "assets/angles/overhead-top.jpg",
+          "desc": "กล้องอยู่เหนือหัวและมองลงมาตรง ๆ ทำให้ฉากกลายเป็นรูปทรง แผนที่ หรือ pattern เหมาะกับงานที่ต้องการ composition ชัด",
+          "use": "ออกแบบมาแล้ว, เหนือกว่า, เฝ้ามอง",
+          "prompt": "overhead shot, top-down view, graphic composition",
+          "glyph": "narrow frame, circle seen from above, dashed vertical center axis"
+        },
+        {
+          "name": "Bird's-Eye View",
+          "photo": "assets/angles/birds-eye.jpg",
+          "desc": "มุมสูงจากระยะไกลกว่า top shot ทำให้ตัวแบบดูเป็นส่วนหนึ่งของพื้นที่หรือระบบใหญ่ ใช้เมื่ออยากให้เห็น scale และตำแหน่งในฉาก",
+          "use": "เห็นภาพรวม, ควบคุม, มองจากข้างบน",
+          "prompt": "bird's-eye view, aerial perspective, subject in landscape",
+          "glyph": "small figure low in frame + long red arrow pointing straight down"
+        },
+        {
+          "name": "Worm's-Eye View",
+          "photo": "assets/angles/worms-eye.jpg",
+          "desc": "กล้องอยู่ต่ำมากใกล้พื้นจนตัวแบบดูสูงใหญ่เกินจริง เหมาะกับฉากที่ต้องการความอลังการ น่ากลัว หรือเหนือมนุษย์",
+          "use": "ยิ่งใหญ่, อันตราย, น่าเกรงขาม",
+          "prompt": "worm's-eye view, extreme low angle, towering subject",
+          "glyph": "tall figure high in frame + red arrow pointing straight up"
+        },
+        {
+          "name": "Over-the-Shoulder",
+          "photo": "assets/angles/over-the-shoulder.jpg",
+          "desc": "ใช้ไหล่หรือหลังของคนหนึ่งเป็น foreground เพื่อมองไปยังอีกคนหนึ่ง เหมาะกับบทสนทนา การเผชิญหน้า หรือมุมมองของตัวละคร",
+          "use": "บทสนทนา, มุมมอง, ความตึงเครียด",
+          "prompt": "over-the-shoulder shot, foreground shoulder, dialogue scene",
+          "glyph": "large dashed ghost figure left (foreground) + solid gold figure right"
+        },
+        {
+          "name": "POV (Point of View)",
+          "photo": "assets/angles/pov.jpg",
+          "desc": "กล้องแทนสายตาของตัวละครหรือผู้ชม ทำให้รู้สึกว่าเราอยู่ในเหตุการณ์จริง เหมาะกับฉาก immersive หรือ first-person video",
+          "use": "อยู่ในเหตุการณ์, เป็นมุมมองส่วนตัว, ใกล้ชิด",
+          "prompt": "point-of-view shot, first-person perspective, immersive",
+          "glyph": "frame + centered gold circle + teal diagonal eyeline across it"
+        },
+        {
+          "name": "Reverse Angle",
+          "photo": "assets/angles/reverse-angle.jpg",
+          "desc": "ตัดกลับไปอีกฝั่งของบทสนทนาหรือ action เพื่อให้เห็นปฏิกิริยาและความต่อเนื่องของ eyeline ในฉากเดียวกัน",
+          "use": "ปฏิกิริยา, ความต่อเนื่อง, การโต้ตอบ",
+          "prompt": "reverse angle, reaction shot, matching eyeline",
+          "glyph": "solid figure left + dashed figure right + red arrow between them"
+        }
+      ]
+    },
+
+    {
+      "id": "movement",
+      "num": "03",
+      "title": "Camera Movement",
+      "intro": "How the camera travels through time and space. Movement changes rhythm, reveals information, and turns an image into an experience.",
+      "promptRule": "สำหรับ AI video ให้ใช้คำกริยาของกล้อง เช่น `slow dolly in`, `orbit shot`, `handheld camera` แล้วตามด้วย speed/mood เพื่อไม่ให้ motion สุ่ม",
+      "layout": "cards, diagram only (no photos)",
+      "cardLabels": { "tag": "Movement", "useLabel": "Use it for", "promptLabel": "Prompt words" },
+      "cards": [
+        { "name": "Pan", "desc": "The camera rotates horizontally from a fixed position. Reveals space or follows action across the frame.", "use": "Reveals, landscapes, following motion.", "prompt": "slow pan from left to right, revealing the scene", "glyph": "gold circle + red arc arrow sweeping left-to-right beneath it" },
+        { "name": "Tilt", "desc": "The camera rotates vertically. Moves attention from ground to sky or body to face.", "use": "Scale reveals, entrances, vertical drama.", "prompt": "slow tilt up, revealing the subject from feet to face", "glyph": "gold circle + red vertical arc arrow on the right, pointing up" },
+        { "name": "Dolly / Track", "desc": "The camera physically moves toward, away from, or alongside the subject. Feels spatial and motivated.", "use": "Push-ins, reveals, emotional approach.", "prompt": "slow dolly in, camera moves closer, emotional reveal", "glyph": "straight red arrow pushing in from the left + dashed track rail below" },
+        { "name": "Truck / Crab", "desc": "The camera moves sideways while maintaining orientation. Tracks parallel action or shifts perspective.", "use": "Walk-and-talk, parallax, lateral reveals.", "prompt": "sideways tracking shot, smooth lateral movement", "glyph": "two parallel horizontal lines (one red arrow, one dashed) under the subject" },
+        { "name": "Pedestal (Boom)", "desc": "The camera moves vertically without tilting. Changes height while keeping the frame's angle stable.", "use": "Reveals over obstacles, status shifts.", "prompt": "camera booms upward, pedestal movement, stable frame", "glyph": "vertical red arrow rising on the right of the subject" },
+        { "name": "Zoom", "desc": "The lens changes focal length without moving the camera. Compresses or expands attention optically.", "use": "Observation, emphasis, stylized punch.", "prompt": "slow zoom in, lens zoom, optical emphasis", "glyph": "outer dashed rect + inner solid rect + centered subject (nested frames)" },
+        { "name": "Crane / Jib", "desc": "The camera rises, descends, or sweeps from a mounted arm. Adds elegance and expanded geography.", "use": "Grand reveals, endings, transitions.", "prompt": "crane shot rising above the subject, elegant reveal", "glyph": "wide red arc sweeping over the top of the subject" },
+        { "name": "Steadicam / Gimbal", "desc": "Smooth mobile camera movement through space. Feels present but controlled.", "use": "Immersion, following characters, fluid scenes.", "prompt": "smooth gimbal shot, fluid camera movement, stable motion", "glyph": "smooth teal S-curve path passing through the subject" },
+        { "name": "Handheld", "desc": "The camera is carried by a person, with visible instability. Adds urgency, realism, or documentary energy.", "use": "Chaos, intimacy, realism.", "prompt": "subtle handheld camera, natural shake, documentary realism", "glyph": "dashed zig-zag shake path on the left + three short red jitter strokes" },
+        { "name": "Whip Pan", "desc": "A very fast pan that blurs the frame. Creates impact, surprise, or energetic transitions.", "use": "Comedy, action, transitions.", "prompt": "fast whip pan transition, motion blur, sudden reveal", "glyph": "dashed circle left → solid gold circle right + fast red arc between" },
+        { "name": "Dolly Zoom (Vertigo)", "desc": "The camera moves while zooming in the opposite direction. Warps depth around a stable subject.", "use": "Shock, realization, disorientation.", "prompt": "dolly zoom, background warps, subject stays centered", "glyph": "nested frames + two red arrows splaying outward at the bottom corners" },
+        { "name": "Arc Shot", "desc": "The camera travels around the subject in a curve. Builds romance, tension, or a hero reveal.", "use": "Product reveals, realization, relationship beats.", "prompt": "slow orbit shot, camera arcs around the subject", "glyph": "dashed ellipse orbit around the gold circle + red arrowhead on the orbit" }
+      ]
+    },
+
+    {
+      "id": "lighting",
+      "num": "04",
+      "title": "Lighting",
+      "intro": "Light defines shape, depth, mood, and genre. In prompts, lighting words often matter more than style labels like \"cinematic\".",
+      "promptRule": "อย่าเขียนแค่ `cinematic lighting` ให้ระบุแหล่งไฟและ mood เช่น `soft key light, red rim light, deep shadows, warm practical lights`",
+      "layout": "rows (name+subtitle | description | prompt words), preceded by a gold callout",
+      "callout": {
+        "title": "Prompt Lighting Stack",
+        "body": "สูตรง่าย: `key light` กำหนดหน้าหลัก, `rim/back light` แยก subject จากฉาก, `practical light` ทำให้ฉากจริง, และ `color grade` ล็อก mood สุดท้าย"
+      },
+      "rows": [
+        { "name": "Key Light", "sub": "Main source", "desc": "The dominant light that shapes the subject. Its size, angle, and softness decide the image's primary character.", "prompt": "soft key light from camera left" },
+        { "name": "Fill Light", "sub": "Shadow control", "desc": "Light used to soften shadows created by the key. More fill feels cleaner; less fill feels dramatic.", "prompt": "low fill light, controlled shadows" },
+        { "name": "Back Light / Rim", "sub": "Separation", "desc": "Light from behind creates an edge around the subject, separating them from the background.", "prompt": "red rim light, glowing edge highlight" },
+        { "name": "Practical Light", "sub": "Visible source", "desc": "A light source visible in the scene: lamps, screens, neon, candles. Grounds the lighting in reality.", "prompt": "warm practical lights in the background" },
+        { "name": "High-Key", "sub": "Bright mood", "desc": "Low contrast, bright, clean lighting. Feels commercial, friendly, and open.", "prompt": "high-key lighting, bright clean shadows" },
+        { "name": "Low-Key", "sub": "Dark mood", "desc": "High contrast with deep shadows. Feels dramatic, premium, mysterious, or dangerous.", "prompt": "low-key lighting, deep black shadows" },
+        { "name": "Chiaroscuro", "sub": "Light vs dark", "desc": "Strong contrast between illuminated and shadowed areas. Sculptural, painterly, and theatrical.", "prompt": "chiaroscuro lighting, sculpted face" },
+        { "name": "Silhouette", "sub": "Shape first", "desc": "The subject is dark against a brighter background. Emphasizes outline, mystery, and graphic shape.", "prompt": "silhouette against red backlight" },
+        { "name": "Motivated Light", "sub": "Story logic", "desc": "Light appears to come from a believable source inside the world of the scene.", "prompt": "motivated by laptop screen glow" },
+        { "name": "Golden Hour", "sub": "Warm natural", "desc": "Low warm sunlight creates softness, nostalgia, and long shadows.", "prompt": "golden hour side light, warm highlights" },
+        { "name": "Neon / Color Contrast", "sub": "Stylized", "desc": "Colored light creates genre and brand identity. Use sparingly for a strong visual signature.", "prompt": "black and ZenityX red color grade" },
+        { "name": "Volumetric Light", "sub": "Atmosphere", "desc": "Light visible through haze, smoke, mist, or dust. Adds depth and cinematic air.", "prompt": "volumetric light beams through haze" }
+      ]
+    },
+
+    {
+      "id": "composition",
+      "num": "05",
+      "title": "Composition & Framing Rules",
+      "intro": "How elements are arranged within the frame - and the continuity rules that keep space coherent across cuts.",
+      "promptRule": "ถ้าจะทำ thumbnail, poster หรือ course cover ให้ใส่ composition ด้วย เช่น `subject on right third, negative space on left for title text` เพื่อเหลือพื้นที่วางตัวหนังสือ",
+      "layout": "cards (diagram only) + photo example gallery + closing callout",
+      "cardLabels": { "tag": "Composition or Continuity Rule", "useLabel": "Effect", "promptLabel": "Prompt words" },
+      "cards": [
+        { "name": "Rule of Thirds", "tag": "Composition", "desc": "Divide the frame into a 3x3 grid; place key subjects on the lines or intersections. Naturally balanced and dynamic.", "use": "Balance, energy, intentional placement.", "prompt": "subject on the right third, rule of thirds composition", "glyph": "frame with 2 dashed verticals + 2 dashed horizontals, gold dot on an intersection" },
+        { "name": "Golden Ratio / Spiral", "tag": "Composition", "desc": "A Fibonacci spiral guides the eye to a natural focal point. A more organic, classical alternative to thirds.", "use": "Harmony, elegance, natural flow.", "prompt": "golden ratio composition, eye follows a natural spiral", "glyph": "frame + dashed sweeping spiral curve + gold dot at the focal point" },
+        { "name": "Leading Lines", "tag": "Composition", "desc": "Roads, rails, architecture, or gazes draw the eye toward the subject or into depth. Powerful directional control.", "use": "Focus, depth, movement, direction.", "prompt": "strong leading lines guiding the eye to the subject", "glyph": "two dashed lines converging from the bottom corners to a gold dot" },
+        { "name": "Frame Within a Frame", "tag": "Composition", "desc": "Use doorways, windows, arches, or foreground objects to frame the subject. Adds depth, focus, and containment.", "use": "Depth, isolation, voyeurism.", "prompt": "frame within a frame, foreground doorway framing subject", "glyph": "outer solid frame + inner dashed frame + gold dot inside both" },
+        { "name": "Symmetry / Centered", "tag": "Composition", "desc": "A perfectly balanced, centered frame. Feels formal, controlled, and deliberate.", "use": "Order, power, formality, stillness.", "prompt": "perfectly centered composition, symmetrical frame", "glyph": "frame + dashed center axis + gold dot dead center" },
+        { "name": "Lead Room & Headroom", "tag": "Composition", "desc": "Leave space in the direction a subject looks or moves and appropriate gap above the head.", "use": "Comfort, balance, anticipation.", "prompt": "ample lead room, natural headroom, clean breathing space", "glyph": "figure on the right + red arrow pointing into the empty left space, teal label 'lead room'" },
+        { "name": "Depth / Layering", "tag": "Composition", "desc": "Stack distinct foreground, midground, and background planes. Turns a flat image into a deep dimensional world.", "use": "Dimension, immersion, richness.", "prompt": "foreground, midground, background layers, cinematic depth", "glyph": "three circles decreasing in size and brightness, stepping back diagonally" },
+        { "name": "The 180° Rule", "tag": "Continuity Rule", "desc": "Keep the camera on one side of an imaginary axis between subjects so screen directions stay consistent across cuts.", "use": "Spatial clarity, coherent geography.", "prompt": "consistent screen direction, 180-degree rule, clear eyeline", "glyph": "axis line between two subjects + red arc above + red label 'stay on one side'" },
+        { "name": "The 30° Rule", "tag": "Continuity Rule", "desc": "When cutting to the same subject, change the angle by at least 30 degrees or change shot size. Otherwise the cut reads as a jump cut.", "use": "Smooth, invisible editing.", "prompt": "30-degree angle shift, matching subject, smooth cut", "glyph": "subject + two dashed sightlines from different positions + red label 'shift 30°'" }
+      ],
+      "exampleGallery": {
+        "title": "Matched Visual Examples",
+        "intro": "ชุดนี้คือภาพตัวอย่างที่ match กับกฎจริง ๆ ไม่ใช่ภาพกองถ่ายทั่วไป ผมใส่ overlay เฉพาะจุดเพื่อให้เห็นว่าภาพนั้นสาธิต concept ไหน และควรแปลเป็น prompt อย่างไร",
+        "cardShape": "16/10 photo (object-fit cover) with a bottom dark gradient scrim + optional CSS/SVG overlay, then label / h4 / Thai copy / source credit",
+        "items": [
+          {
+            "label": "Composition Example",
+            "title": "Rule of Thirds",
+            "photo": "assets/examples/rule-of-thirds.jpg",
+            "alt": "Hot air balloon positioned near a rule-of-thirds intersection",
+            "overlay": "CSS thirds grid — white 1px lines at 33.333% and 66.666% both axes, mix-blend-mode screen, opacity .78",
+            "copy": "วาง subject ใกล้จุดตัดของ grid และให้พื้นที่รอบตัวช่วยเล่า scale ของฉาก Prompt ควรระบุทั้งตำแหน่ง subject และพื้นที่ว่าง",
+            "source": "Source: Thomas Somme / Unsplash"
+          },
+          {
+            "label": "Composition Example",
+            "title": "Leading Lines",
+            "photo": "assets/examples/leading-lines.jpg",
+            "alt": "Railway tracks creating strong leading lines into the frame",
+            "overlay": "SVG (viewBox 0 0 1600 1000, preserveAspectRatio none): two red 7px lines from bottom corners converging to a gold r=18 dot at 800,420",
+            "copy": "เส้นรางนำสายตาไปยังจุดลึกของภาพ เหมาะกับ prompt ที่ต้องการ depth และทิศทางการมองที่ชัด",
+            "source": "Source: Alok Sajeev / Unsplash"
+          },
+          {
+            "label": "Composition Example",
+            "title": "Frame Within a Frame",
+            "photo": "assets/examples/frame-within-frame.jpg",
+            "alt": "Window frame used as an internal frame inside the photo",
+            "overlay": "none",
+            "copy": "ใช้กรอบหน้าต่างเป็นกรอบย่อยภายในภาพ ช่วยบังคับสายตาและทำให้ภาพมีชั้น foreground/background",
+            "source": "Source: david Griffiths / Unsplash"
+          },
+          {
+            "label": "Composition Example",
+            "title": "Symmetry / Centered",
+            "photo": "assets/examples/symmetry.jpg",
+            "alt": "Centered corridor showing symmetrical composition",
+            "overlay": "CSS center axis — bright red vertical line at 50%, dimmer red horizontal line at 50%",
+            "copy": "เส้นกลางและผนังสองฝั่งเท่ากัน ทำให้ภาพนิ่ง เป็นระเบียบ และดู intentional เหมาะกับงาน premium/architecture",
+            "source": "Source: the iop / Unsplash"
+          },
+          {
+            "label": "Composition Example",
+            "title": "Depth / Layering",
+            "photo": "assets/examples/depth-layering.jpg",
+            "alt": "Trees in foreground with mountain layers in the background",
+            "overlay": "SVG three horizontal translucent bands (red / gold / teal at 13% alpha) labelled BACKGROUND, MIDGROUND, FOREGROUND in white monospace",
+            "copy": "แยก foreground, midground, background เพื่อให้ภาพไม่แบน Prompt ควรสั่ง layer ชัดเมื่ออยากได้ภาพ cinematic depth",
+            "source": "Source: Adrian Newell / Unsplash"
+          }
+        ]
+      },
+      "closingCallout": {
+        "title": "ZenityX Prompt Pattern",
+        "body": "ใช้สูตรนี้กับทุกการ์ด: `[shot size] + [subject/action] + [angle] + [camera movement] + [lighting] + [composition] + [mood/color grade]`",
+        "examples": [
+          "A cinematic medium close-up of a Thai AI instructor, eye-level angle, slow dolly in, soft key light, red rim light, subject on right third, deep black and red color grade.",
+          "A wide shot of a founder walking through a studio, low angle, smooth tracking shot, volumetric backlight, strong leading lines, premium education brand mood."
+        ]
+      }
+    }
+  ],
+
+  "footer": {
+    "logo": "assets/zenityx-logo.png (142px)",
+    "big": "The frame is the prompt.",
+    "mono": "ZenityX Cinematography Reference - Preserve the visual grammar, add prompt control."
+  },
+
+  "counts": {
+    "sections": 5,
+    "shotSizeCards": 10,
+    "angleCards": 10,
+    "movementCards": 12,
+    "lightingRows": 12,
+    "compositionCards": 9,
+    "exampleGalleryItems": 5,
+    "callouts": 2,
+    "promptLabBoxes": 5,
+    "totalTechniques": 53
+  }
+}
