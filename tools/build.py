@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Builds site/index.html from content.json + the diagram SVGs lifted from the source page."""
-import json, io, re, html
+import json, io, os, re, html
 
-BASE = "/Volumes/ALT-04/AI/00-AI Training/Cinematography Reference"
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 content = json.load(io.open(f"{BASE}/content.json", encoding="utf-8"))
 glyphs  = json.load(io.open(f"{BASE}/tools/_glyphs.json", encoding="utf-8"))
 LOGO    = io.open(f"{BASE}/tools/_logo-inline.html", encoding="utf-8").read().strip()
