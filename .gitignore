@@ -28,3 +28,6 @@ layout-blueprint.md
 *.pem
 .env
 .env.*
+
+# Font files for local design work — the site loads these from the Google Fonts CDN
+/Fonts/
